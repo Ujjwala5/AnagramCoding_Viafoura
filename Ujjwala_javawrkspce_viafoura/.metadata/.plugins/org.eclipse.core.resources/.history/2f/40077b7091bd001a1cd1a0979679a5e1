@@ -1,0 +1,6 @@
+FROM openjdk:8
+VOLUME /tmp
+ARG JAR_FILE
+WORKDIR E:\Ujjwala_javawrkspce_viafoura\Anagramendpoint\target\
+COPY ${JAR_FILE} anagramendpoint.jar
+ENTRYPOINT ["java","-jar","/anagramendpoint.jar"]

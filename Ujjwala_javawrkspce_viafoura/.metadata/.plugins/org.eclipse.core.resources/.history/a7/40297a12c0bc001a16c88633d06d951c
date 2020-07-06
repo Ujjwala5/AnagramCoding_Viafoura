@@ -1,0 +1,115 @@
+package com.viafoura.controller;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.*;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.viafoura.service.AnagramService;
+
+
+
+
+@RestController
+@RequestMapping("/")
+public class AnagramController {
+	
+	@Autowired
+	private AnagramService service;
+	
+	
+	
+	public AnagramService getService() {
+		return service;
+	}
+
+
+
+	public void setService(AnagramService service) {
+		this.service = service;
+	}
+
+
+
+	@PostMapping(path = "/anagrams/{anagramstr1}/{anagramstr2}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	
+	public Map<String, Object> areAnagrams(@PathVariable("anagramstr1") String anagramstr1,@PathVariable("anagramstr2") String anagramstr2) throws JSONException {
+		List<String> anagram=new ArrayList<String>();
+		anagram.add(anagramstr1);
+		anagram.add(anagramstr2);
+		boolean val=checkvalidstrings(anagram);
+		Map<String, Object> json = new HashMap<>();
+		if(val)
+		{
+		JSONObject jsonobj=service.areAnagrams(anagramstr1, anagramstr2);
+		System.out.println("jsonobj outside1"+jsonobj);
+		json.put("sambath-if", "false");
+		return json;
+		//return jsonobj;
+		}else
+		{
+			json.put("sambath-else", "false");
+			return json;
+			//return new ResponseEntity<JSONObject>(HttpStatus.BAD_REQUEST).getBody();
+		}
+		
+			
+		
+	    //code
+	}
+	
+	
+@PostMapping(path = "/anagrams/{anagramstr1}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	
+	public ResponseEntity<Object> areAnagrams(@PathVariable("anagramstr1") String anagramstr1) throws JSONException {
+	List<String> anagram=new ArrayList<String>();
+	anagram.add(anagramstr1);
+	
+		boolean val=checkvalidstrings(anagram);
+		if(val)
+		{
+		JSONObject jsonobj=service.areAnagrams(anagramstr1);
+		System.out.println("jsonobj Anagrams1"+jsonobj);
+		return new ResponseEntity<Object>(jsonobj,HttpStatus.OK);
+		}else
+		{
+			return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
+		}
+		
+			
+		
+	    //code
+	}
+
+	private boolean checkvalidstrings(List<String> anagrams) {
+		// TODO Auto-generated method stub
+		boolean val=false;
+		for(String s:anagrams)
+		{
+			val= s!=null && s.matches("^[a-zA-Z]*$");
+		}
+		return val;
+}
+
+	
+	
+}
+
+

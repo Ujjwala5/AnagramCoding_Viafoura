@@ -1,0 +1,31 @@
+package com.viafoura;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Anagram_Strings {
+	
+		private static String canonicalize(String s) {
+	        return Stream.of(s.split("")).sorted().collect(Collectors.joining());
+	    }
+
+	    public static List<Set<String>> getAnagrams(Reader reader) {
+	    Map<String, Set<String>> map = new BufferedReader(reader).lines()
+	                                     .flatMap(Pattern.compile("\\W+")::splitAsStream)
+	                                     .collect(Collectors.groupingBy(Anagram_Strings::canonicalize, Collectors.toSet()));
+	        return map.values().stream().filter(list -> list.size() > 1).collect(Collectors.toList());
+	    }
+
+	    public static void main(String[] args) throws IOException {
+	        getAnagrams(new StringReader("abc cab tat aaa\natt tat bbb"))
+	                .forEach(System.out::println);
+	    }
+}

@@ -1,0 +1,24 @@
+package com.viafoura.test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@SpringBootTest
+public class AnagramTest {
+	
+	@InjectMocks
+    EmployeeManager manager;
+     
+    @Mock
+    EmployeeDao dao;
+ 
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+    }
+     
+    @Test
+
+}

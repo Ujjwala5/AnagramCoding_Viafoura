@@ -1,0 +1,48 @@
+package com.viafoura.dao;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AnagramDao {
+	
+	public JSONObject areAnagrams(String anagramstr1,String anagramstr2) throws JSONException
+	{
+		JSONObject jsonobj=new JSONObject(); 
+	
+		char[] characters = anagramstr1.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(anagramstr2);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){
+				sbSecond.deleteCharAt(index);
+			}
+			
+			try {
+				jsonobj=sbSecond.length()==0 ? jsonobj.put("areAnagrams","true"):jsonobj.put("areAnagrams","false");
+				System.out.println("jsonobj"+jsonobj);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			}
+		
+		System.out.println("jsonobj outside"+jsonobj);
+		return jsonobj;
+}
+	
+	public JSONObject areAnagrams(String anagramstr1) throws JSONException
+	{
+		JSONObject jsonobj=new JSONObject(); 
+	
+		
+		
+		System.out.println("jsonobj outside"+jsonobj);
+		return jsonobj;
+}
+	
+	
+}

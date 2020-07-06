@@ -1,0 +1,140 @@
+[INFO] 2020-07-06 00:52:10,589 com.viafoura.AnagramMainApplication main - Application started
+[INFO] 2020-07-06 00:52:59,861 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | est
+[INFO] 2020-07-06 00:52:59,864 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:52:59,866 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:52:59,869 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = est
+[INFO] 2020-07-06 00:52:59,870 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | est
+[INFO] 2020-07-06 00:52:59,879 com.viafoura.dao.AnagramDao areAnagrams - Both string are different in length, returning false
+[INFO] 2020-07-06 00:52:59,886 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:52:59,887 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:17,292 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | estt
+[INFO] 2020-07-06 00:53:17,293 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:53:17,294 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:53:17,295 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = estt
+[INFO] 2020-07-06 00:53:17,300 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | estt
+[INFO] 2020-07-06 00:53:17,302 com.viafoura.dao.AnagramDao areAnagrams - Both string are equal in length, calculating anagrams
+[INFO] 2020-07-06 00:53:17,303 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:17,309 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:17,310 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:17,311 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"true"}
+[INFO] 2020-07-06 00:53:17,312 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"true"}
+[INFO] 2020-07-06 00:53:17,312 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"true"}
+[INFO] 2020-07-06 00:53:33,414 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | tstt
+[INFO] 2020-07-06 00:53:33,415 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:53:33,416 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:53:33,416 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = tstt
+[INFO] 2020-07-06 00:53:33,417 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | tstt
+[INFO] 2020-07-06 00:53:33,418 com.viafoura.dao.AnagramDao areAnagrams - Both string are equal in length, calculating anagrams
+[INFO] 2020-07-06 00:53:33,420 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:33,421 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:33,423 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:33,424 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:33,425 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:33,426 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:46,965 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = 1test | tstt
+[INFO] 2020-07-06 00:53:46,966 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:53:46,967 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:53:46,968 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = 1test | secondParam = tstt
+[INFO] 2020-07-06 00:53:46,968 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - 1test | tstt
+[INFO] 2020-07-06 00:53:46,969 com.viafoura.dao.AnagramDao areAnagrams - Both string are different in length, returning false
+[INFO] 2020-07-06 00:53:46,970 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:53:46,972 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:54:04,886 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = 1test | t1stt
+[INFO] 2020-07-06 00:54:04,887 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:54:04,888 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 00:55:55,497 com.viafoura.AnagramMainApplication main - Application started
+[INFO] 2020-07-06 00:57:05,049 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = 1test | t1stt
+[INFO] 2020-07-06 00:57:05,052 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:57:05,054 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 00:57:17,712 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = 1test | tstt
+[INFO] 2020-07-06 00:57:17,713 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:57:17,714 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:57:17,715 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = 1test | secondParam = tstt
+[INFO] 2020-07-06 00:57:17,716 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - 1test | tstt
+[INFO] 2020-07-06 00:57:17,726 com.viafoura.dao.AnagramDao areAnagrams - Both string are different in length, returning false
+[INFO] 2020-07-06 00:57:17,728 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:17,728 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,941 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | tstt
+[INFO] 2020-07-06 00:57:35,942 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:57:35,944 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:57:35,945 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = tstt
+[INFO] 2020-07-06 00:57:35,949 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | tstt
+[INFO] 2020-07-06 00:57:35,950 com.viafoura.dao.AnagramDao areAnagrams - Both string are equal in length, calculating anagrams
+[INFO] 2020-07-06 00:57:35,952 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,954 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,955 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,956 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,962 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:35,963 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:40,655 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = te22st | tstt
+[INFO] 2020-07-06 00:57:40,656 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:57:40,657 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 00:57:40,657 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = te22st | secondParam = tstt
+[INFO] 2020-07-06 00:57:40,658 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - te22st | tstt
+[INFO] 2020-07-06 00:57:40,659 com.viafoura.dao.AnagramDao areAnagrams - Both string are different in length, returning false
+[INFO] 2020-07-06 00:57:40,659 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:57:40,660 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 00:59:13,377 com.viafoura.AnagramMainApplication main - Application started
+[INFO] 2020-07-06 00:59:44,471 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = te22st | tstt
+[INFO] 2020-07-06 00:59:44,473 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:59:44,475 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 00:59:58,485 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | tstt1
+[INFO] 2020-07-06 00:59:58,486 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 00:59:58,487 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 01:00:05,782 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | tstt
+[INFO] 2020-07-06 01:00:05,783 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 01:00:05,783 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 01:00:05,784 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = tstt
+[INFO] 2020-07-06 01:00:05,785 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | tstt
+[INFO] 2020-07-06 01:00:05,792 com.viafoura.dao.AnagramDao areAnagrams - Both string are equal in length, calculating anagrams
+[INFO] 2020-07-06 01:00:05,794 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:05,795 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:05,796 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:05,799 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:05,800 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:05,801 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:10,824 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = test | tste
+[INFO] 2020-07-06 01:00:10,824 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 01:00:10,825 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 01:00:10,826 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test | secondParam = tste
+[INFO] 2020-07-06 01:00:10,827 com.viafoura.dao.AnagramDao areAnagrams - Enter areAnagrams - test | tste
+[INFO] 2020-07-06 01:00:10,828 com.viafoura.dao.AnagramDao areAnagrams - Both string are equal in length, calculating anagrams
+[INFO] 2020-07-06 01:00:10,828 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:10,829 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:10,829 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"false"}
+[INFO] 2020-07-06 01:00:10,829 com.viafoura.dao.AnagramDao areAnagrams - jsonobj - {"areAnagrams":"true"}
+[INFO] 2020-07-06 01:00:10,830 com.viafoura.dao.AnagramDao areAnagrams - Exit areAnagrams - {"areAnagrams":"true"}
+[INFO] 2020-07-06 01:00:10,830 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"areAnagrams":"true"}
+[INFO] 2020-07-06 01:00:16,260 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variable = test
+[INFO] 2020-07-06 01:00:16,261 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variable
+[INFO] 2020-07-06 01:00:16,262 com.viafoura.controller.AnagramController areAnagrams - Valid String, calling service
+[INFO] 2020-07-06 01:00:16,263 com.viafoura.service.AnagramService areAnagrams - Enter areAnagrams - firstParam = test
+[INFO] 2020-07-06 01:00:16,264 com.viafoura.dao.AnagramDao areAnagrams - DAO : Enter areAnagrams - test
+[INFO] 2020-07-06 01:00:16,264 com.viafoura.dao.AnagramDao areAnagrams - Calling permute
+[INFO] 2020-07-06 01:00:16,266 com.viafoura.dao.AnagramDao areAnagrams - DAO : Exit areAnagrams - {"anagrams":["test","tets","tset","tste","ttse","ttes","etst","etts","estt","estt","etst","etts","sett","sett","stet","stte","stte","stet","test","tets","tset","tste","ttse","ttes"]}
+[INFO] 2020-07-06 01:00:16,267 com.viafoura.service.AnagramService areAnagrams - Exit areAnagrams - {"anagrams":["test","tets","tset","tste","ttse","ttes","etst","etts","estt","estt","etst","etts","sett","sett","stet","stte","stte","stet","test","tets","tset","tste","ttse","ttes"]}
+[INFO] 2020-07-06 17:07:03,465 com.viafoura.AnagramMainApplication main - Application started
+[INFO] 2020-07-06 17:10:40,419 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund | demo12
+[INFO] 2020-07-06 17:10:40,427 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:40,428 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 17:10:41,080 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund12 | demo
+[INFO] 2020-07-06 17:10:41,082 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:41,084 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 17:10:41,118 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund12 | demo12
+[INFO] 2020-07-06 17:10:41,120 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:41,121 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST
+[INFO] 2020-07-06 17:10:41,155 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund | dunf
+[INFO] 2020-07-06 17:10:41,156 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:41,159 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 17:10:41,267 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund | demo
+[INFO] 2020-07-06 17:10:41,269 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:41,271 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 17:10:41,302 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variables = fund | fun
+[INFO] 2020-07-06 17:10:41,307 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variables
+[INFO] 2020-07-06 17:10:41,388 com.viafoura.controller.AnagramController areAnagrams - Both strings are valid, calling service
+[INFO] 2020-07-06 17:10:41,422 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variable = fund
+[INFO] 2020-07-06 17:10:41,424 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variable
+[INFO] 2020-07-06 17:10:41,425 com.viafoura.controller.AnagramController areAnagrams - Valid String, calling service
+[INFO] 2020-07-06 17:10:41,458 com.viafoura.controller.AnagramController areAnagrams - Enter areAnagrams - Path Variable = fund12
+[INFO] 2020-07-06 17:10:41,460 com.viafoura.controller.AnagramController areAnagrams - Validating Path Variable
+[INFO] 2020-07-06 17:10:41,461 com.viafoura.controller.AnagramController areAnagrams - Invalid String passed - returning HTTP BAD REQUEST

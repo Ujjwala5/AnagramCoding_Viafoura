@@ -1,0 +1,31 @@
+package com.viafoura;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Anagram_Strings {
+	
+	public static boolean checkAnagram(String first, String second){
+	char[] characters = first.toCharArray();
+	StringBuilder sbSecond = new StringBuilder(second);
+	for(char ch : characters)
+	{
+		int index = sbSecond.indexOf("" + ch);
+		if(index != -1){sbSecond.deleteCharAt(index);
+		}
+		else
+		{
+			return false;
+			}
+		}
+	return sbSecond.length()==0 ? true : false;
+}
+}

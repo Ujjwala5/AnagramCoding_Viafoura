@@ -1,0 +1,11 @@
+FROM openjdk:8
+MAINTAINER ujjwala
+ADD /target/anagramendpoint-0.0.1-SNAPSHOT.jar /home/docker/tmp/anagramendpoint.jar
+ENTRYPOINT ["java", "-jar", "/home/docker/tmp/anagramendpoint.jar"]
+#RUN javac Hello.java  
+#CMD ["java", "Hello"]  
+#VOLUME /tmp
+
+#ENTRYPOINT ["java", "-cp", "target/anagramendpoint.jar", "com.viafoura.AnagramMainApplication"]
+#ENTRYPOINT ["java", "-cp", "target/anagramendpoint-0.0.1-SNAPSHOT.jar", "com.viafoura.AnagramMainApplication"]
+#docker-machine ssh default

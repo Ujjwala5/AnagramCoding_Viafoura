@@ -1,0 +1,16 @@
+package com.viafoura;
+
+public class AnagramStringsTest {
+
+	    @Test
+	    public void isAnagram() {
+	    	Anagram_Strings checker = new Anagram_Strings();
+
+	        assertThat(checker.isAnagram("peek", "keep"), equalTo(true));
+	        assertThat(checker.isAnagram("mary", "army"), equalTo(true));
+
+	        assertThat(checker.isAnagram("dart", "mart"), equalTo(false));
+	    }
+	}
+
+

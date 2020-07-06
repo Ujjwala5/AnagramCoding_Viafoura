@@ -1,0 +1,26 @@
+package com.viafoura.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AnagramDao {
+	
+	public boolean areAnagrams(String first,String second)
+	{
+		
+		char[] characters = first.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(second);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){
+				sbSecond.deleteCharAt(index);
+			}
+			else
+			{
+				return false;
+			}
+			}
+		return sbSecond.length()==0 ? true : false;
+}
+}

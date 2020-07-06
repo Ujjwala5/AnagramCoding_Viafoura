@@ -1,0 +1,34 @@
+package com.viafoura.dao;
+
+import org.json.JSONArray;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AnagramDao {
+	
+	public JSONArray areAnagrams(String first,String second)
+	{
+		checkvalidstrings(anagramstr1,anagramstr2);
+		char[] characters = first.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(second);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){
+				sbSecond.deleteCharAt(index);
+			}
+			else
+			{
+				return false;
+			}
+			}
+		return sbSecond.length()==0 ? true : false;
+}
+	
+	private void checkvalidstrings(String anagramstr1, String anagramstr2) {
+		// TODO Auto-generated method stub
+		if((anagramstr1!=null && anagramstr2!=null) && ((anagramstr1.matches("^[[a-zA-Z]*$"))&&(anagramstr2.matches("^[[a-zA-Z]*$"))))
+		{
+		
+		}
+}

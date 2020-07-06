@@ -1,0 +1,30 @@
+package com.viafoura;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import org.junit.Test;
+
+public class AnagramStringsTest {
+
+	    @Test
+	    public void isAnagram() {
+	    	Anagram_Strings checker = new Anagram_Strings();
+
+	        assertThat(checker.getAnagrams("peek", "keep"), equalTo(true));
+	        assertThat(checker.getAnagrams("mary", "army"), equalTo(true));
+
+	        assertThat(checker.getAnagrams("dart", "mart"), equalTo(false));
+	    }
+	    
+	    public void scanstringanagrams() throws IOException
+	    {
+	    	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	    	String name = in.readLine(); // If the user has not entered anything, assume the default value.
+	    	String number = in.readLine(); // It reads only String,and we need to parse it.
+	    	System.out.println("Name " + name + "\t number " + number);
+	    }
+	}
+
+

@@ -1,0 +1,84 @@
+package com.viafoura.dao;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AnagramDao {
+	
+	public JSONObject areAnagrams(String anagramstr1,String anagramstr2) throws JSONException
+	{
+		JSONObject jsonobj=new JSONObject(); 
+	
+		char[] characters = anagramstr1.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(anagramstr2);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){
+				sbSecond.deleteCharAt(index);
+			}
+			
+			try {
+				jsonobj=sbSecond.length()==0 ? jsonobj.put("areAnagrams","true"):jsonobj.put("areAnagrams","false");
+				System.out.println("jsonobj***"+jsonobj);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			}
+		
+		System.out.println("jsonobj outside"+jsonobj);
+		return jsonobj;
+}
+	
+	public JSONObject areAnagrams(String anagramstr1) throws JSONException
+	{
+		JSONObject jsonobj=new JSONObject(); 
+		int n=anagramstr1.length();
+	   jsonobj=permute(anagramstr1,0,n-1,jsonobj);
+		
+		System.out.println("jsonobj areAnagrams"+jsonobj);
+		return jsonobj;
+}
+
+  private JSONObject permute(String str, int l, int r,JSONObject jsonobj) throws JSONException 
+    { 
+	  
+    if (l == r) 
+    {
+        System.out.println(str); 
+    jsonobj.put("anagrams", str);
+    }
+    else
+    { 
+        for (int i = l; i <= r; i++) 
+        { 
+            str = swap(str,l,i); 
+            permute(str, l+1, r,jsonobj); 
+            str = swap(str,l,i); 
+        } 
+    }
+    return jsonobj;
+} 
+/** 
+ * Swap Characters at position 
+ * @param a string value 
+ * @param i position 1 
+ * @param j position 2 
+ * @return swapped string 
+ */
+public String swap(String a, int i, int j) 
+{ 
+    char temp; 
+    char[] charArray = a.toCharArray(); 
+    temp = charArray[i] ; 
+    charArray[i] = charArray[j]; 
+    charArray[j] = temp; 
+    return String.valueOf(charArray); 
+} 
+
+	
+}

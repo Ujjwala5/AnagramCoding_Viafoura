@@ -1,0 +1,5 @@
+package com.viafoura.service;
+
+public class AnagramService {
+
+}

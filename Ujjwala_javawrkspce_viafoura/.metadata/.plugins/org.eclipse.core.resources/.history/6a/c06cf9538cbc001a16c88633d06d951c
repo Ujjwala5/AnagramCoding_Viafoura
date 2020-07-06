@@ -1,0 +1,14 @@
+package com.viafoura.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnagramService {
+	
+	public String areAnagrams(String first,String second)
+	{
+		return second;
+		
+	}
+
+}

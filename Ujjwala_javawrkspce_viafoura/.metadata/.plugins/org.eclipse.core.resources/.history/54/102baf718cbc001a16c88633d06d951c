@@ -1,0 +1,11 @@
+package com.viafoura.dao;
+
+public class AnagramDao {
+	
+	public String areAnagrams(String first,String second)
+	{
+		return second;
+		
+	}
+
+}

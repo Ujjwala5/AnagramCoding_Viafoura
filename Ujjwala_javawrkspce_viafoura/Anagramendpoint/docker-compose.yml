@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  anagram-compose-app-container:
+    image:  anagrambeans/anagramendpoint:latest
+    build:
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - /home/docker/tmp/anagram-compose-app/
+    ports:
+      - "8080:9080"

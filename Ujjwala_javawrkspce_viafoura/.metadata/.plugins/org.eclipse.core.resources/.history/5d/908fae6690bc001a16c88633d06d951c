@@ -1,0 +1,40 @@
+package com.viafoura.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.viafoura.service.AnagramService;
+
+
+@RestController
+public class AnagramController {
+	
+	@Autowired
+	private AnagramService service;
+	
+	
+	
+	public AnagramService getService() {
+		return service;
+	}
+
+
+
+	public void setService(AnagramService service) {
+		this.service = service;
+	}
+
+
+
+	@PostMapping(path = "/anagrams", consumes = "application/json", produces = "application/json")
+	public String areAnagrams(@RequestBody String  first,String second) {
+		System.out.println("came");
+		service.areAnagrams(first, second);
+		
+		return second;
+	    //code
+	}
+}

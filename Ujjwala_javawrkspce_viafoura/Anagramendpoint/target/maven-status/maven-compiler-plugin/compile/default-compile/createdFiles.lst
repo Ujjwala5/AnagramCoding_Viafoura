@@ -1,0 +1,4 @@
+com\viafoura\service\AnagramService.class
+com\viafoura\controller\AnagramController.class
+com\viafoura\dao\AnagramDao.class
+com\viafoura\AnagramMainApplication.class

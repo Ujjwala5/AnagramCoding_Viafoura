@@ -1,0 +1,39 @@
+package com.viafoura.service;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.viafoura.dao.AnagramDao;
+
+@Service
+public class AnagramService {
+	
+	@Autowired
+	private AnagramDao dao;
+	
+	
+	
+	public AnagramDao getDao() {
+		return dao;
+	}
+
+
+
+	public void setDao(AnagramDao dao) {
+		this.dao = dao;
+	}
+
+
+
+	public JSONObject areAnagrams(String first,String second) throws JSONException
+	{
+		
+		JSONObject jsonobj=dao.areAnagrams(first, second);
+		return jsonobj;
+		
+	}
+
+}

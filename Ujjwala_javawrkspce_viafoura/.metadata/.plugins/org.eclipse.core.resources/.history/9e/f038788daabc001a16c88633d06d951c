@@ -1,0 +1,43 @@
+package com.viafoura.dao;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AnagramDao {
+	
+	public JSONObject areAnagrams(String anagramstr1,String anagramstr2)
+	{
+		JSONObject jsonobj=new JSONObject(); 
+	
+		boolean val=checkvalidstrings(anagramstr1,anagramstr2);
+		if(val){
+		char[] characters = anagramstr1.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(anagramstr2);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){
+				sbSecond.deleteCharAt(index);
+			}
+			
+			jsonobj=sbSecond.length()==0 ? jsonobj.put("areAnagrams","true"):jsonobj.put("areAnagrams","false");
+			}
+		}else
+		{
+			jsonobj.put("400", "Strings are not valid");
+		}
+		return jsonobj;
+}
+	
+	private boolean checkvalidstrings(String anagramstr1, String anagramstr2) {
+		// TODO Auto-generated method stub
+		boolean val=false;
+		if((anagramstr1!=null && anagramstr2!=null) && ((anagramstr1.matches("^[[a-zA-Z]*$"))&&(anagramstr2.matches("^[[a-zA-Z]*$"))))
+		{
+		boolean val=true;
+		}
+		return val;
+}
+}

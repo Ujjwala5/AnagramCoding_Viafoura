@@ -1,0 +1,18 @@
+FROM maven:3.6.0-jdk-8-alpine
+MAINTAINER ujjwala
+#volume /home/docker/tmp/anagram-compose-app/
+#WORKDIR /e/Ujjwala_javawrkspce_viafoura/Anagramendpoint
+ADD pom.xml /home/docker/tmp/anagram-compose-app/
+ADD src /home/docker/tmp/anagram-compose-app/
+#resolve maven dependencies
+#RUN --mount=type=cache,target=/home/docker/.m2  mvn clean package -Dmaven.test.skip
+RUN mvn -f /home/docker/tmp/anagram-compose-app/pom.xml clean package
+ADD /target/anagramendpoint-0.0.1-SNAPSHOT.jar /home/docker/tmp/anagram-compose-app/anagramendpoint.jar
+ENTRYPOINT ["java", "-jar", "/home/docker/tmp/anagram-compose-app/anagramendpoint.jar"]
+#RUN javac Hello.java  
+#CMD ["java", "Hello"]  
+#VOLUME /tmp
+
+#ENTRYPOINT ["java", "-cp", "target/anagramendpoint.jar", "com.viafoura.AnagramMainApplication"]
+#ENTRYPOINT ["java", "-cp", "target/anagramendpoint-0.0.1-SNAPSHOT.jar", "com.viafoura.AnagramMainApplication"]
+#docker-machine ssh default

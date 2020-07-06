@@ -1,0 +1,32 @@
+package com.viafoura;
+
+import java.util.Scanner;
+
+public class Anagram_Strings {
+	
+	public static boolean checkAnagram(String first, String second){
+	char[] characters = first.toCharArray();
+	StringBuilder sbSecond = new StringBuilder(second);
+	for(char ch : characters)
+	{
+		int index = sbSecond.indexOf("" + ch);
+		if(index != -1){sbSecond.deleteCharAt(index);
+		}
+		else
+		{
+			return false;
+			}
+		}
+	return sbSecond.length()==0 ? true : false;
+}
+	
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String first=sc.nextLine();
+		String second=sc.nextLine();
+		System.out.println(first+" "+second);
+		Anagram_Strings.checkAnagram(first, second);
+		sc.close();
+	}
+}

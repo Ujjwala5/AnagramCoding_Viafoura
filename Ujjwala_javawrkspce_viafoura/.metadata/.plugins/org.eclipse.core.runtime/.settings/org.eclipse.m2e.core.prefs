@@ -1,0 +1,5 @@
+eclipse.m2.autoUpdateProjects=true
+eclipse.m2.problem.notCoveredMojoExecution=warning
+eclipse.m2.problem.outofdateProjectConfig=warning
+eclipse.m2.updateProjects=true
+eclipse.preferences.version=1

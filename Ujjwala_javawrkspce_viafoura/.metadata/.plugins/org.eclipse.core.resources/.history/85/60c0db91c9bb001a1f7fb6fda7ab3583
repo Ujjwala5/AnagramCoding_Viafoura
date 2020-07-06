@@ -1,0 +1,28 @@
+package com.viafoura;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Test;
+
+public class AnagramStringsTest {
+
+	    @Test
+	    public void isAnagram() {
+	    
+	    		assertTrue(Anagram_Strings.checkAnagram("word", "wrdo")); 
+	    		assertFalse(Anagram_Strings.checkAnagram("bbb", "b"));
+	    		assertFalse(Anagram_Strings.checkAnagram("ccc", "ccccccc"));
+	    		assertTrue(Anagram_Strings.checkAnagram("a", "a"));
+	    		assertFalse(Anagram_Strings.checkAnagram("slep", "sleep"));
+	    		assertTrue(Anagram_Strings.checkAnagram("boat", "btoa"));
+	    		assertFalse(Anagram_Strings.checkAnagram("pure", "in"));
+	    		assertFalse(Anagram_Strings.checkAnagram("fill", "fil"));
+	 
+
+	    }
+	    
+	   
+	}
+
+

@@ -1,0 +1,25 @@
+package com.viafoura.dao;
+
+public class AnagramDao {
+	
+	public String areAnagrams(String first,String second)
+	{
+		
+		char[] characters = first.toCharArray();
+		StringBuilder sbSecond = new StringBuilder(second);
+		for(char ch : characters)
+		{
+			int index = sbSecond.indexOf("" + ch);
+			if(index != -1){sbSecond.deleteCharAt(index);
+			}
+			else
+			{
+				return false;
+			}
+			}
+		
+		return sbSecond.length()==0 ? true : false;;
+		
+	}
+
+}
